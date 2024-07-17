@@ -1,10 +1,15 @@
-import { fetchData } from "./helpers/fetchData"
+// import { fetchData } from "./helpers/fetchData"
+import HomePage from './pages/HomePage/HomePage'
 
 const App = () => {
-  console.log(fetchData());
+  // const data = fetchData().then(console.log).catch();
+  // console.log(data.json());
+
 
   return (
-    <div>App</div>
+    <>
+      <HomePage />
+    </>
   )
 }
 
