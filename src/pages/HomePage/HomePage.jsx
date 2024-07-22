@@ -2,28 +2,35 @@ import { fetchData } from '../../helpers/fetchData';
 import { useEffect, useState } from 'react'
 
 const HomePage = () => {
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         async function fetchFilms() {
             try {
-                const films = await fetchData();
-                console.log(films.data.results)
+                const {results} = await fetchData();
+                // console.log(films)
+                setData(results);
+                
             } catch (error) {
                 console.log(error)
             }
-        } 
+        }
         fetchFilms();
     }, []);
 
-  return (
-    <div>
+console.log(data);
+    return (
         <div>
-            <p></p>
-            <p></p>
+            <h1>Trending Today</h1>
+            <ul>
+                {data.map((film) => (
+                    <li key={film.id}>
+                        <p>{film.original_title}</p>
+                    </li>
+                ))}
+            </ul>
         </div>
-
-    </div>
-  )
+    )
 }
 
 export default HomePage

@@ -1,5 +1,8 @@
 // import { fetchData } from "./helpers/fetchData"
-import HomePage from './pages/HomePage/HomePage'
+// import HomePage from './pages/HomePage/HomePage'
+import { NavLink, Route, Routes } from "react-router-dom"
+import HomePage from "./pages/HomePage/HomePage"
+
 
 const App = () => {
   // const data = fetchData().then(console.log).catch();
@@ -8,11 +11,16 @@ const App = () => {
 
   return (
     <>
-      <HomePage />
+      <header>
+        <nav>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/movies">Movies</NavLink>
+        </nav>
+      </header>
 
       <Routes>
-        <Route />
-        <Route />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/movies" element={<div>movies</div>} />
       </Routes>
     </>
   )

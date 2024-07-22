@@ -12,7 +12,7 @@ const options = {
 export const fetchData = async () => {
     const response = await axios.get(url, options);
 
-    return response;
+    return response.data;
 }
 
 
