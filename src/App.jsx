@@ -6,9 +6,6 @@ import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage"
 
 
 const App = () => {
-  // const data = fetchData().then(console.log).catch();
-  // console.log(data.json());
-
 
   return (
     <>
