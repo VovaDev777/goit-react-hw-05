@@ -21,5 +21,14 @@ export const fetchDataById = async (id) => {
     return response.data;
 }
 
+export const fetchCastById = async (id) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}/credits`, options);
 
+    return response.data;
+}
 
+export const fetchRewievsById = async (id) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}/reviews`, options);
+
+    return response.data;
+}

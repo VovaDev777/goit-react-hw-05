@@ -22,7 +22,7 @@ const MovieDetailsPage = () => {
         fetchFilmById(movieId);
     }, [movieId])
 
-    console.log(filmInfo)
+    // console.log(filmInfo)
     // poster_path
 
     return (
