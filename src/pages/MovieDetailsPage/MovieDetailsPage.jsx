@@ -5,7 +5,7 @@ import { fetchDataById } from "../../helpers/fetchData";
 
 const MovieDetailsPage = () => {
     const { movieId } = useParams();
-    const [filmInfo, setFilmInfo] = useState();
+    const [filmInfo, setFilmInfo] = useState(null);
 
 
     useEffect(() => {
@@ -26,14 +26,15 @@ const MovieDetailsPage = () => {
 
     return (
         <>
-        <div>
-        <button>Go back</button>
-        </div>
             <div>
-                <img src={`https://image.tmdb.org/t/p/w500${filmInfo.poster_path}`} alt="" />
-                <h2></h2>
+                <button>Go back</button>
             </div>
-
+            {filmInfo && (
+                <div>
+                    <img src={`https://image.tmdb.org/t/p/w500${filmInfo.poster_path}`} alt={filmInfo.original_title} />
+                    <h2>{filmInfo.original_title}</h2>
+                </div>
+            )}
         </>
     )
 }
