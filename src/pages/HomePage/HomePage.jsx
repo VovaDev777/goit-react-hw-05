@@ -19,7 +19,7 @@ const HomePage = () => {
         fetchFilms();
     }, []);
 
-console.log(data);
+// console.log(data);
     return (
         <div>
             <h1>Trending Today</h1>
