@@ -1,5 +1,3 @@
-// import { fetchData } from "./helpers/fetchData"
-// import HomePage from './pages/HomePage/HomePage'
 import { NavLink, Route, Routes } from "react-router-dom"
 import HomePage from "./pages/HomePage/HomePage"
 import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage"
