@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
+const url = 'https://api.themoviedb.org/3/trending/movie/day';
 
 
 const options = {

@@ -44,6 +44,11 @@ const MovieDetailsPage = () => {
                     </div>
                 </div>
             )}
+            <div>
+                <p>Additional information</p>
+                {/* <Link >Cast</Link> */}
+                {/* <Link > Reviews</Link> */}
+            </div>
         </>
     )
 }
