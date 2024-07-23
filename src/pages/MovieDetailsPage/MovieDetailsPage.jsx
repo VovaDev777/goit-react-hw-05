@@ -32,7 +32,16 @@ const MovieDetailsPage = () => {
             {filmInfo && (
                 <div>
                     <img src={`https://image.tmdb.org/t/p/w500${filmInfo.poster_path}`} alt={filmInfo.original_title} />
-                    <h2>{filmInfo.original_title}</h2>
+                    <div>
+                        <h2>{filmInfo.original_title}</h2>
+                        <p>User Score: {Math.round(filmInfo.vote_average * 10)}%</p>
+                        <h3>Overview</h3>
+                        <p>{filmInfo.overview}</p>
+                        <h3>Genres</h3>
+                        <p>{filmInfo.genres.map((genre) => {
+                            return genre.name;
+                        }).join(" ")}</p>
+                    </div>
                 </div>
             )}
         </>
@@ -40,5 +49,3 @@ const MovieDetailsPage = () => {
 }
 
 export default MovieDetailsPage
-
-// https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg
