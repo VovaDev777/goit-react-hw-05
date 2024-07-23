@@ -1,5 +1,6 @@
 import { fetchData } from '../../helpers/fetchData';
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     const [data, setData] = useState([]);
@@ -25,7 +26,7 @@ console.log(data);
             <ul>
                 {data.map((film) => (
                     <li key={film.id}>
-                        <p>{film.original_title}</p>
+                        <Link to={`/movies/${film.id}`}>{film.original_title}</Link>
                     </li>
                 ))}
             </ul>

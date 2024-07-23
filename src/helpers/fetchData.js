@@ -15,5 +15,11 @@ export const fetchData = async () => {
     return response.data;
 }
 
+export const fetchDataById = async (id) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}`, options);
+
+    return response.data;
+}
+
 
 
