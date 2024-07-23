@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { fetchDataById } from "../../helpers/fetchData";
+import { Link } from "react-router-dom";
 
 
 const MovieDetailsPage = () => {
@@ -46,8 +47,8 @@ const MovieDetailsPage = () => {
             )}
             <div>
                 <p>Additional information</p>
-                {/* <Link >Cast</Link> */}
-                {/* <Link > Reviews</Link> */}
+                <Link to="/movies/:movieId/cast">Cast</Link>
+                <Link to="/movies/:movieId/reviews"> Reviews</Link>
             </div>
         </>
     )
