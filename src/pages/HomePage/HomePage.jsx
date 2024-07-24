@@ -23,9 +23,9 @@ const HomePage = () => {
 
 // console.log(data);
     return (
-        <div>
+        <div className={css.container}>
             <h1 className={css.text}>Trending Today</h1>
-            <ul>
+            <ul className={css.list}>
                 {data.map((film) => (
                     <li key={film.id} className={css.listItem}>
                         <Link to={`/movies/${film.id}`} state={location}>{film.original_title}</Link>

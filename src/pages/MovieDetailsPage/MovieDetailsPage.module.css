@@ -1,0 +1,50 @@
+.detailCon {
+    display: flex;
+    gap: 30px;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+.image {
+    width: 300px;
+    height: 400px;
+}
+.name {
+    font-size: 45px;
+    font-weight: bold;
+}
+.descCon {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.score {
+    font-size: 20px;
+}
+.overview {
+    font-size: 25px;
+    font-weight: bold;
+}
+.overviewText {
+    width: 800px;
+    font-size: 20px;
+}
+.genres {
+    font-size: 25px;
+    font-weight: bold;
+}
+.genresText {
+    font-size: 20px;
+}
+.additionalCon {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.text {
+    font-size: 20px;
+    font-weight: bold;
+}
+.cast {
+    margin-left: 20px;
+}

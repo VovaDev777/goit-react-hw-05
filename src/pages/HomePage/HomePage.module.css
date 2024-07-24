@@ -1,3 +1,20 @@
 .text {
-    
+    font-family: sans-serif;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.listItem {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

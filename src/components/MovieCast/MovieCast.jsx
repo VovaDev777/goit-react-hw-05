@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { fetchCastById } from "../../helpers/fetchData";
-
+import css from '../MovieCast/MovieCast.module.css'
 
 
 const MovieCast = () => {
@@ -23,12 +23,12 @@ const MovieCast = () => {
 
     // console.log(castData)
     return (
-        <div>
+        <div className={css.castCon}>
             {castData.map((cast) => (
-                <div key={cast.id}>
-                    <img src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`} width="200" height="200" alt={cast.name} />
-                    <p>{cast.name}</p>
-                    <p>Character: {cast.character}</p>
+                <div className={css.cardCon} key={cast.id}>
+                    <img className={css.img} src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`} width="200" height="200" alt={cast.name} />
+                    <p className={css.name}>{cast.name}</p>
+                    <p className={css.character}>Character: {cast.character}</p>
                 </div>
             ))}
         </div>
