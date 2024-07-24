@@ -2,7 +2,7 @@
 
 const NotFoundPage = () => {
   return (
-    <div>NotFoundPage</div>
+    <div>NotFoundPage, please reload the page</div>
   )
 }
 
