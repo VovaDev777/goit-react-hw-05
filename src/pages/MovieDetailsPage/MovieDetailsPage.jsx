@@ -26,8 +26,8 @@ const MovieDetailsPage = () => {
 
     return (
         <>
-            <div>
-                <button><Link to={location.state?.from || '/'}>Go back</Link></button>
+            <div className={css.btnCon}>
+                <button className={css.btn}><Link className={css.link} to={location.state?.from || '/'}>Go back</Link></button>
             </div>
             {filmInfo && (
                 <div className={css.detailCon}>

@@ -1,1 +1,19 @@
-.css
+.con {
+    padding: 0 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.text {
+    font-size: 20px;
+}
+.author {
+    font-size: 25px;
+    font-weight: bold;
+}
+.textCon {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

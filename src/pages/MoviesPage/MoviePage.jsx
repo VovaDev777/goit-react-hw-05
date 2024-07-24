@@ -59,13 +59,15 @@ const MoviePage = () => {
                     </button>
                 </form>
             </div>
-            <ul>
+            <div className={css.con}>
+            <ul className={css.list}>
                 {films.map((film) => (
-                    <li key={film.id}>
+                    <li className={css.listItem} key={film.id}>
                         <Link to={`/movies/${film.id}`} state={{ from: location }}>{film.title}</Link>
                     </li>
                 ))}
             </ul>
+            </div>
         </>
     )
 }

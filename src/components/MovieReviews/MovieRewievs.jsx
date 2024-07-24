@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchRewievsById } from "../../helpers/fetchData"
 import { useParams } from "react-router-dom";
+import css from '../MovieReviews/MovieRewievs.module.css'
 
 
 const MovieRewievs = () => {
@@ -22,14 +23,14 @@ const MovieRewievs = () => {
   
 
   return (
-    <div>
+    <div className={css.con}>
       {rewievData.length === 0 ? (
-        <p>No reviews yet...</p>
+        <p className={css.noRew}>No reviews yet...</p>
       ) : (
         rewievData.map((rewiev) => (
-          <div key={rewiev.id}>
-            <h2>Author: {rewiev.author}</h2>
-            <p>{rewiev.content}</p>
+          <div key={rewiev.id} className={css.textCon}>
+            <h2 className={css.author}>Author: {rewiev.author}</h2>
+            <p className={css.text}>{rewiev.content}</p>
           </div>
         ))
       )}

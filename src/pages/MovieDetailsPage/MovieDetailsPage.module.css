@@ -4,47 +4,95 @@
     font-family: sans-serif;
     margin-bottom: 20px;
 }
+
 .image {
     width: 300px;
     height: 400px;
 }
+
 .name {
     font-size: 45px;
     font-weight: bold;
 }
+
 .descCon {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .score {
     font-size: 20px;
 }
+
 .overview {
     font-size: 25px;
     font-weight: bold;
 }
+
 .overviewText {
     width: 800px;
     font-size: 20px;
 }
+
 .genres {
     font-size: 25px;
     font-weight: bold;
 }
+
 .genresText {
     font-size: 20px;
 }
+
 .additionalCon {
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
 }
+
 .text {
     font-size: 20px;
     font-weight: bold;
 }
+
 .cast {
     margin-left: 20px;
+}
+.btnCon {
+    margin-bottom: 15px;
+}
+.btn {
+    background-color: #7BA7AB;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #706f6f;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #A3D0C3;
+}
+.link {
+    text-decoration: none;
 }
