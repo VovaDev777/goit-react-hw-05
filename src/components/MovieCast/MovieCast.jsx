@@ -21,7 +21,7 @@ const MovieCast = () => {
         getCast(movieId)
     }, [movieId])
 
-    console.log(castData)
+    // console.log(castData)
   return (
     <div>
         {castData.map((cast) => {

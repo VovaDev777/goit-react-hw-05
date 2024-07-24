@@ -24,7 +24,7 @@ export const fetchDataById = async (id) => {
 export const fetchCastById = async (id) => {
     const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}/credits`, options);
 
-    return response.data;
+    return response.data.cast;
 }
 
 export const fetchRewievsById = async (id) => {
