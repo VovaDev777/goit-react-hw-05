@@ -41,7 +41,6 @@ const MoviePage = () => {
         findFilm(word);
     }, [word])
 
-    // console.log(films)
     return (
         <>
             <div className={css.d1}>
