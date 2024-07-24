@@ -4,6 +4,7 @@ import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage"
 import MovieCast from "./components/MovieCast/MovieCast"
 import MovieRewievs from "./components/MovieReviews/MovieRewievs"
 import '../src/helpers/reset.css'
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage"
 
 
 const App = () => {
