@@ -30,5 +30,5 @@ export const fetchCastById = async (id) => {
 export const fetchRewievsById = async (id) => {
     const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}/reviews`, options);
 
-    return response.data;
+    return response.data.results;
 }
