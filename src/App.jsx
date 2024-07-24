@@ -7,6 +7,7 @@ import '../src/helpers/reset.css'
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage"
 import MoviePage from "./pages/MoviesPage/MoviePage"
 import css from '../src/App.module.css'
+import { lazy } from "react"
 
 
 const App = () => {
