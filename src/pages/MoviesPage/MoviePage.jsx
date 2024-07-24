@@ -19,6 +19,8 @@ const MoviePage = () => {
         navigate(`?query=${searchWord}`);
     }
 
+    // here
+
     useEffect(() => {
         const query = new URLSearchParams(location.search).get('query');
         if (query) {
