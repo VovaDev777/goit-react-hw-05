@@ -15,7 +15,6 @@ const MovieDetailsPage = () => {
             try {
                 const filmDescription = await fetchDataById(id);
                 setFilmInfo(filmDescription);
-                // console.log(filmDescription);
             } catch (error) {
                 console.log(error)
             }
@@ -23,13 +22,11 @@ const MovieDetailsPage = () => {
         fetchFilmById(movieId);
     }, [movieId])
 
-    // console.log(filmInfo)
-    // poster_path
 
     return (
         <>
             <div>
-                <button><Link to={location.state}>Go back</Link></button>
+                <button><Link to={location.state?.from || '/'}>Go back</Link></button>
             </div>
             {filmInfo && (
                 <div>
@@ -48,8 +45,8 @@ const MovieDetailsPage = () => {
             )}
             <div>
                 <p>Additional information</p>
-                <Link to="cast">Cast</Link>
-                <Link to="rewievs"> Reviews</Link>
+                <Link to="cast" state={{ from: location.state?.from }}>Cast</Link>
+                <Link to="rewievs" state={{ from: location.state?.from }}> Reviews</Link>
             </div>
             <div>
                 <Outlet/>
