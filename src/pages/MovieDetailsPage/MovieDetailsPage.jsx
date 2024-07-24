@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { fetchDataById } from "../../helpers/fetchData";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 
 const MovieDetailsPage = () => {
     const { movieId } = useParams();
     const [filmInfo, setFilmInfo] = useState(null);
+    const location = useLocation();
 
 
     useEffect(() => {
@@ -28,7 +29,7 @@ const MovieDetailsPage = () => {
     return (
         <>
             <div>
-                <button>Go back</button>
+                <button><Link to={location.state}>Go back</Link></button>
             </div>
             {filmInfo && (
                 <div>

@@ -1,9 +1,10 @@
 import { fetchData } from '../../helpers/fetchData';
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const HomePage = () => {
     const [data, setData] = useState([]);
+    const location = useLocation();
 
     useEffect(() => {
         async function fetchFilms() {
@@ -26,7 +27,7 @@ const HomePage = () => {
             <ul>
                 {data.map((film) => (
                     <li key={film.id}>
-                        <Link to={`/movies/${film.id}`}>{film.original_title}</Link>
+                        <Link to={`/movies/${film.id}`} state={location}>{film.original_title}</Link>
                     </li>
                 ))}
             </ul>

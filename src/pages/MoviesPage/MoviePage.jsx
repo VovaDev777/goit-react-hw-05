@@ -2,12 +2,13 @@ import { AiOutlineSearch } from "react-icons/ai";
 import css from './MoviePage.module.css'
 import { useEffect, useState } from "react";
 import { fetchFilmByName } from "../../helpers/fetchData";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const MoviePage = () => {
 
     const [word, setWord] = useState("");
     const [films, setFilms] = useState([]);
+    const location = useLocation();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -31,7 +32,7 @@ const MoviePage = () => {
         findFilm(word);
     }, [word])
 
-    console.log(films)
+    // console.log(films)
     return (
         <>
             <div className={css.d1}>
@@ -51,7 +52,7 @@ const MoviePage = () => {
             <ul>
                 {films.map((film) => (
                     <li key={film.id}>
-                        <Link to={`/movies/${film.id}`}>{film.title}</Link>
+                        <Link to={`/movies/${film.id}`} state={location}>{film.title}</Link>
                     </li>
                 ))}
             </ul>
