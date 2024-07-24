@@ -1,6 +1,7 @@
 import { fetchData } from '../../helpers/fetchData';
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
+import css from '../HomePage/HomePage.module.css'
 
 const HomePage = () => {
     const [data, setData] = useState([]);
@@ -23,10 +24,10 @@ const HomePage = () => {
 // console.log(data);
     return (
         <div>
-            <h1>Trending Today</h1>
+            <h1 className={css.text}>Trending Today</h1>
             <ul>
                 {data.map((film) => (
-                    <li key={film.id}>
+                    <li key={film.id} className={css.listItem}>
                         <Link to={`/movies/${film.id}`} state={location}>{film.original_title}</Link>
                     </li>
                 ))}
