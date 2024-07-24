@@ -19,7 +19,7 @@ const MovieRewievs = () => {
     getRewievs(movieId);
   }, [movieId])
 
-  console.log(rewievData);
+  
 
   return (
     <div>
