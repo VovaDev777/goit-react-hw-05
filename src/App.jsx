@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage/HomePage"
 import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage"
 import MovieCast from "./components/MovieCast/MovieCast"
 import MovieRewievs from "./components/MovieReviews/MovieRewievs"
+import '../src/helpers/reset.css'
 
 
 const App = () => {
