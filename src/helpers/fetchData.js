@@ -32,3 +32,9 @@ export const fetchRewievsById = async (id) => {
 
     return response.data.results;
 }
+
+export const fetchFilmByName = async (searchWord) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/search/movie?query=${searchWord}&language=en-US`, options);
+
+    return response.data.results;
+}

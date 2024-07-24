@@ -5,6 +5,7 @@ import MovieCast from "./components/MovieCast/MovieCast"
 import MovieRewievs from "./components/MovieReviews/MovieRewievs"
 import '../src/helpers/reset.css'
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage"
+import MoviePage from "./pages/MoviesPage/MoviePage"
 
 
 const App = () => {
@@ -20,7 +21,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/movies" element={<div>movies</div>} />
+        <Route path="/movies" element={<MoviePage />} />
         <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
           <Route path="cast" element={<MovieCast />} />
           <Route path="rewievs" element={<MovieRewievs />} />
