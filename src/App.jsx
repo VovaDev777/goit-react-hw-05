@@ -6,6 +6,7 @@ import MovieRewievs from "./components/MovieReviews/MovieRewievs"
 import '../src/helpers/reset.css'
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage"
 import MoviePage from "./pages/MoviesPage/MoviePage"
+import css from '../src/App.module.css'
 
 
 const App = () => {
@@ -13,9 +14,9 @@ const App = () => {
   return (
     <>
       <header>
-        <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/movies">Movies</NavLink>
+        <nav className={css.nav}>
+          <NavLink to="/" className={css.text}>Home</NavLink>
+          <NavLink to="/movies" className={css.text}>Movies</NavLink>
         </nav>
       </header>
 

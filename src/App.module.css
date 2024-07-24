@@ -1,0 +1,13 @@
+.nav {
+    padding: 20px;
+    background-color: #A3D0C3;
+    display: flex;
+    gap: 40px;
+}
+.text {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #706f6f;
+    text-decoration: none;
+    box-shadow: inset;
+}
