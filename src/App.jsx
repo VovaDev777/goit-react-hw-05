@@ -8,7 +8,6 @@ import '../src/helpers/reset.css'
 // import MoviePage from "./pages/MoviesPage/MoviePage"
 import css from '../src/App.module.css'
 import { lazy, Suspense } from "react"
-import clsx from "clsx"
 
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
@@ -24,12 +23,7 @@ const App = () => {
 
   return (
     <>
-      <header>
-        <nav className={css.nav}>
-          <NavLink to="/" className={makeNavLinkClass}>Home</NavLink>
-          <NavLink to="/movies" className={makeNavLinkClass}>Movies</NavLink>
-        </nav>
-      </header>
+      
       <Suspense fallback={<div>Loading Page....</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
