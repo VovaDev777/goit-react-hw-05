@@ -1,7 +1,8 @@
 import { fetchData } from '../../helpers/fetchData';
 import { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import css from '../HomePage/HomePage.module.css'
+import MovieList from '../../components/MovieList/MovieList';
 
 const HomePage = () => {
     const [data, setData] = useState([]);
@@ -25,13 +26,7 @@ const HomePage = () => {
     return (
         <div className={css.container}>
             <h1 className={css.text}>Trending Today</h1>
-            <ul className={css.list}>
-                {data.map((film) => (
-                    <li key={film.id} className={css.listItem}>
-                        <Link to={`/movies/${film.id}`} state={location}>{film.original_title}</Link>
-                    </li>
-                ))}
-            </ul>
+            <MovieList filmList={data} state={location}/>
         </div>
     )
 }

@@ -1,0 +1,9 @@
+.listItem {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
