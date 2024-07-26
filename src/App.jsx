@@ -15,9 +15,7 @@ const MoviePage = lazy(() => import("./pages/MoviesPage/MoviePage"));
 const MovieDetailsPage = lazy(() => import("./pages/MovieDetailsPage/MovieDetailsPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 
-const makeNavLinkClass = ({isActive}) => {
-  return clsx(css.link, isActive && css.active);
-}
+
 
 const App = () => {
 
