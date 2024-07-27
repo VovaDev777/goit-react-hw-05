@@ -2,7 +2,8 @@ import { AiOutlineSearch } from "react-icons/ai";
 import css from './MoviePage.module.css'
 import { useEffect, useState } from "react";
 import { fetchFilmByName } from "../../helpers/fetchData";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import MovieList from "../../components/MovieList/MovieList";
 
 const MoviePage = () => {
 
@@ -60,13 +61,7 @@ const MoviePage = () => {
                 </form>
             </div>
             <div className={css.con}>
-            <ul className={css.list}>
-                {films.map((film) => (
-                    <li className={css.listItem} key={film.id}>
-                        <Link to={`/movies/${film.id}`} state={{ from: location }}>{film.title}</Link>
-                    </li>
-                ))}
-            </ul>
+            <MovieList filmList={films} state={{ from: location}}/>
             </div>
         </>
     )
